@@ -104,7 +104,7 @@ const App = () => {
   return (
     <ThemeContext.Provider value={state.mode === modes.SESSION ? '#B66F79' : '#004B75'}>
       <div className="App">
-          <audio ref={audio} className="clip" src={sound}></audio>
+          <audio ref={audio} id="beep" className="clip" src={sound}></audio>
           <h1>25 + 5 Clock</h1>
           <TimerSettings 
             breakDuration={state.breakDuration} 
