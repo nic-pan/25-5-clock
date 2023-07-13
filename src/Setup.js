@@ -1,26 +1,28 @@
-import { useState } from "react";
-import { Button } from "react-bootstrap";
+import { useContext } from "react";
+import { types } from "./constants";
+import { capitalizeFirstLetter } from "./utils";
+import ThemeContext from "./ThemeContext";
 
 const Setup = (props) => {
-    let {time, setTime} = useState(props.time);
+    const theme = useContext(ThemeContext);
 
     const increment = () => {
-        setTime(time++);
+        if (props.duration < 60) props.updateDuration(types.INCREMENT)
     }
     const decrement = () => {
-        setTime(time--);
+        if (props.duration > 1) props.updateDuration(types.DECREMENT)
     }
 
     return <div>
-        <label id={`${props.action}-label`}>{props.action} Length</label>
-        <div className="">
-            <Button id={`${props.action}-increment`} onClick={increment}>
+        <label id={`${props.action}-label`}><h5>{capitalizeFirstLetter(props.action)} Length</h5></label>
+        <div style={{fontSize: 20}}>
+            <a style={{color: theme}} id={`${props.action}-increment`} onClick={increment} disabled={props.isRunning}>
                 <i className="bi bi-arrow-up-circle-fill"></i>
-            </Button>
-            <span id={`${props.action}-length`}>{time}</span>
-            <Button id={`${props.action}-decrement`} onClick={decrement}>
+            </a>
+            <span style={{margin: 'auto 10px'}} id={`${props.action}-length`}>{props.duration}</span>
+            <a style={{color: theme}} id={`${props.action}-decrement`} onClick={decrement} disabled={props.isRunning}>
                 <i className="bi bi-arrow-down-circle-fill"></i>
-            </Button>
+            </a>
         </div>
     </div>
 }

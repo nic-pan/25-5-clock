@@ -1,10 +1,22 @@
 import Setup from "./Setup";
-import React from'react';
+import React from 'react';
 
-const TimerSettings = () => {
-    return <div>
-        <Setup action="break" time={5}/>
-        <Setup action="session" time={25}/>
+const TimerSettings = (props) => {
+    return <div className="row">
+        <div className="col-md-6">
+            <Setup 
+                action="session" 
+                duration={props.sessionDuration} 
+                updateDuration={props.updateSessionDuration} 
+                disabled={props.isRunning} />
+        </div>
+        <div className="col-md-6">
+            <Setup 
+                action="break" 
+                duration={props.breakDuration} 
+                updateDuration={props.updateBreakDuration} 
+                disabled={props.isRunning} />
+        </div>
     </div>
 }
 export default TimerSettings;

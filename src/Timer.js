@@ -1,21 +1,39 @@
 import { CountdownCircleTimer } from 'react-countdown-circle-timer'
+import { capitalizeFirstLetter } from './utils'
+import { useContext } from 'react';
+import ThemeContext from './ThemeContext';
 
-const Timer = (props) => (
-  <CountdownCircleTimer
-    isPlaying={props.run}
-    duration={props.duration}
-    colors={['#004777', '#F7B801', '#A30000', '#A30000']}
-    id="time-left"
-  >
-    {props.mode}
-    {({ remainingTime }) => {
-        const minutes = Math.floor(remainingTime / 60)
-        let seconds = remainingTime % 60
-        if (seconds < 10) seconds = `0${seconds}`;
+const Timer = (props) => {
+  const theme = useContext(ThemeContext);
+  const colors = [theme]; 
 
-        return `${minutes}:${seconds}`
-    }}
-  </CountdownCircleTimer>
-)
+  const timerDisplay = ({ remainingTime }) => {
+    const minutes = Math.floor(remainingTime / 60)
+    let seconds = remainingTime % 60
+    if (seconds < 10) seconds = `0${seconds}`;
+
+    return <div>
+      <h2>{capitalizeFirstLetter(props.mode)}</h2>
+      <h3>
+        {`${minutes}:${seconds}`}
+      </h3>
+    </div>
+  } 
+
+  return <div style={{display: 'flex', justifyContent: 'center'}}>
+          <CountdownCircleTimer
+            key={props.updateKey}
+            isPlaying={props.run}
+            isSmoothColorTransition={true}
+            duration={props.duration * 60}
+            colors={colors}
+            id="time-left"
+            size={220}
+            onComplete={props.onComplete}
+          >
+            { timerDisplay }
+          </CountdownCircleTimer>
+  </div>
+}
 
 export default Timer;
