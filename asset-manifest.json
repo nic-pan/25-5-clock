@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.2b5f6d7a.css",
-    "main.js": "/static/js/main.3e6159fe.js",
-    "static/js/787.1f5f3708.chunk.js": "/static/js/787.1f5f3708.chunk.js",
-    "static/media/bootstrap-icons.woff?": "/static/media/bootstrap-icons.4753c5ba57962b4d7bf8.woff",
-    "static/media/bootstrap-icons.woff2?": "/static/media/bootstrap-icons.6d63d0501e5ed7b79dab.woff2",
-    "static/media/magic.mp3": "/static/media/magic.95539c5ce8adb7629d00.mp3",
-    "index.html": "/index.html",
-    "main.2b5f6d7a.css.map": "/static/css/main.2b5f6d7a.css.map",
-    "main.3e6159fe.js.map": "/static/js/main.3e6159fe.js.map",
-    "787.1f5f3708.chunk.js.map": "/static/js/787.1f5f3708.chunk.js.map"
+    "main.css": "/25-5-clock/static/css/main.16c39e22.css",
+    "main.js": "/25-5-clock/static/js/main.7e9dc1b7.js",
+    "static/js/787.1f5f3708.chunk.js": "/25-5-clock/static/js/787.1f5f3708.chunk.js",
+    "static/media/bootstrap-icons.woff?": "/25-5-clock/static/media/bootstrap-icons.4753c5ba57962b4d7bf8.woff",
+    "static/media/bootstrap-icons.woff2?": "/25-5-clock/static/media/bootstrap-icons.6d63d0501e5ed7b79dab.woff2",
+    "static/media/magic.mp3": "/25-5-clock/static/media/magic.95539c5ce8adb7629d00.mp3",
+    "index.html": "/25-5-clock/index.html",
+    "main.16c39e22.css.map": "/25-5-clock/static/css/main.16c39e22.css.map",
+    "main.7e9dc1b7.js.map": "/25-5-clock/static/js/main.7e9dc1b7.js.map",
+    "787.1f5f3708.chunk.js.map": "/25-5-clock/static/js/787.1f5f3708.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2b5f6d7a.css",
-    "static/js/main.3e6159fe.js"
+    "static/css/main.16c39e22.css",
+    "static/js/main.7e9dc1b7.js"
   ]
 }
