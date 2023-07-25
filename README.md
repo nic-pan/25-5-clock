@@ -2,4 +2,4 @@
 A FreeCodeCamp course project.
 
 # Demo
-Coming soon!
+https://nic-pan.github.io/25-5-clock/
